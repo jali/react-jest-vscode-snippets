@@ -56,10 +56,10 @@
             "\t// Render a checkbox with label in the document",
             "\tconst checkbox=shallow(",
             "\t\t<CheckboxWithLabel labelOn='On' labelOff='Off' />",
-            "\t\t);",
-            "\t\texpect(checkbox.text()).toEqual('Off');",
-            "\t\tcheckbox.find('input').simulate('change');",
-            "\t\texpect(checkbox.text()).toEqual('On');",
+            "\t);",
+            "\texpect(checkbox.text()).toEqual('Off');",
+            "\tcheckbox.find('input').simulate('change');",
+            "\texpect(checkbox.text()).toEqual('On');",
             "});"
         ],
         "description" : "Enzyme Shallow Renderer with Jest"
