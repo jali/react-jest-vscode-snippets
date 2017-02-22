@@ -1,0 +1,67 @@
+{
+    "testAsyncCallback": {
+        "prefix": "tasca",
+        "body": [
+            "test('the data is peanut butter', (done) => {",
+            "\tfunction callback(data){",
+            "\t\texpect(data).toBe('peanut butter');",
+            "\t\tdone();",
+            "\t}fetchData(callback);",
+            "})"
+        ]
+    },
+    "testAsyncPromise": {
+        "prefix": "taspr",
+        "body": [
+            "test('the data is peanut butter', () => {",
+            "\treturn fetchData().then(data) => {",
+            "\t\texpect(data).toBe('peanut butter');",
+            "\t});",
+            "})"
+        ]
+    },
+    "testAsyncAwait": {
+        "prefix": "tasaw",
+        "body": [
+            "test('the data is peanut butter', async () => {",
+            "\tlet data = await fetchData();",
+            "\texpect(data).toBe('peanut butter');",
+            "})"
+        ]
+    },
+    "testSnapShot": {
+        "prefix": "tsnsh",
+        "body": [
+            "import React from 'react';",
+            "import Link from '../Link.react';",
+            "import renderer from 'react-test-renderer';",
+            "",
+            "it('renders correctly', () => {",
+            "\tconst tree = renderer.create(",
+            "\t\t<Link page='http://www.facebook.com'>Facebook</Link>",
+            "\t).toJSON();",
+            "\texpect(tree).toMatchSnapshot();",
+            "});"
+        ],
+        "description" : "Snapshot Testing with Jest"
+    },
+    "testShallowRenderer": {
+        "prefix": "tshre",
+        "body": [
+            "//__tests__/CheckboxWithLabel-test.js",
+            "import React from 'react';",
+            "import { shallow } from 'enzyme';",
+            "import CheckboxWithLabel from '../CheckboxWithLabel';",
+            "test('Checkbox With Label changes the text after click', () = > {",
+            "\t// Render a checkbox with label in the document",
+            "\tconst checkbox=shallow(",
+            "\t\t<CheckboxWithLabel labelOn='On' labelOff='Off' />",
+            "\t\t);",
+            "\t\texpect(checkbox.text()).toEqual('Off');",
+            "\t\tcheckbox.find('input').simulate('change');",
+            "\t\texpect(checkbox.text()).toEqual('On');",
+            "});"
+        ],
+        "description" : "Enzyme Shallow Renderer with Jest"
+    }
+}

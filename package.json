@@ -1,0 +1,58 @@
+{
+    "name": "react-jest-vscode-snippets",
+    "displayName": "react-jest-vscode-snippets",
+    "description": "Snippets for react testing with jest",
+    "version": "0.0.1",
+    "publisher": "jali",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "jest",
+        "es6",
+        "react"
+    ],
+    "galleryBanner": {
+        "color": "#486a8d",
+        "theme": "dark"
+    },
+    "icon": "images/jest-logo.png",
+    "author": "Jalal Maqdisi",
+    "bugs": {
+        "url": "https://github.com/jali/react-jest-vscode-snippets/issues"
+    },
+    "homepage": "https://github.com/jali/react-jest-vscode-snippetss",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jali/react-jest-vscode-snippets.git"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/javascript.json"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "vscode": "^0.11.0"
+    }
+}
